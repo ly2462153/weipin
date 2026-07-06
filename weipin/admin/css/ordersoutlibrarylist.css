@@ -1,0 +1,6 @@
+﻿#aside fieldset { border: 1px solid #bfbfbf; padding: 0 5px 0 10px; margin: 0 0 10px 10px; }
+#aside fieldset p { margin: 10px 0 10px 0; }
+.tb tr:hover { color: #ff6600; }
+.tb td a { text-decoration: none; color: #0085CC; }
+.tb td a:hover { text-decoration: underline; color: #0085CC; }
+.tb td img { width: 50px; height: 50px; }

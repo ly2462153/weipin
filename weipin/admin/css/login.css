@@ -1,0 +1,13 @@
+body{ margin:0px; padding:0px; background:url(../img/bgLoginBox.jpg) no-repeat center 60px; text-align:center; font-size: .9em; line-height: 1.2em; color: #4f4f4f; }
+.red{ color:#DB2424; font-size:12px;}
+input {padding: 2px 5px; border: 1px solid #bfbfbf;}
+input:hover {border: 1px solid #48addf;}
+input:focus {border: 1px solid #48addf; background-color: #f0f7fa;}
+.button{background:url(../img/bgButtonLogin.jpg) no-repeat top left; width:122px; padding:0px; border: none; color: #4f4f4f; height: 23px; cursor: pointer; text-align:center; font-size:12px;}
+	.button:hover{border:0px;}
+.divMain{ width:470px; height:360px; margin:60px auto auto auto;}
+.divMain .content{ width:auto; height:auto; padding-left:75px; overflow:hidden;}
+	.content table{ margin:auto; text-align:left;}
+	.content .textFieldLogin {width: 308px; height:16px; margin: 1px 0 10px 0;}
+.divMain a{ text-decoration:none; color:#DB2424; font-size:12px;}
+.divMain a:hover{ color:#48addf; text-decoration:underline;}

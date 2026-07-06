@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Attributes>
+  <Attribute name="人群" value="23">
+    <AttributeValues name="男性" value="42" />
+    <AttributeValues name="女性" value="43" />
+  </Attribute>
+  <Attribute name="款式" value="24">
+    <AttributeValues name="人字拖" value="44" />
+  </Attribute>
+  <Attribute name="鞋跟" value="25">
+    <AttributeValues name="平跟" value="45" />
+    <AttributeValues name="坡跟" value="46" />
+  </Attribute>
+</Attributes>

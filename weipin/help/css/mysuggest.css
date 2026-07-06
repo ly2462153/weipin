@@ -1,0 +1,25 @@
+body, td, th { font-size: 12px; line-height: 100%; }
+ul, li { margin: 0px; padding: 0px; list-style-type: none; }
+.jy_box { background-color: #FFFFFF; width: 970px; margin: 8px auto 8px auto; height: auto; background-image: url(/img/yjjy_bg.jpg); background-repeat: repeat-x; }
+.tex { width: 780px; margin: 0 auto 0 auto; }
+.jy_tit { color: #FE8D00; font-size: 14px; font-weight: bold; }
+.tex01 { height: 6px; background-image: url(/img/tex_t.jpg); }
+.tex02 { height: auto; height: 145px; background-image: url(/img/tex_bg.jpg); background-repeat: repeat-y; }
+.tex03 { background-position: bottom; background-image: url(/img/tex_b.jpg); background-repeat: no-repeat; }
+textarea { height: 140px; width: 770px; overflow: auto; border: 0; margin: 5px; color: #333; }
+.textarea1 { height: 140px; width: 780px; background-repeat: repeat-y; overflow: auto; font-size: 12px; margin: 0px; padding: 0px; background-position: 0px; background-color: #CCCC33; }
+.sug02 { width: 780px; margin: 0 auto 0 auto; }
+.input_01 { font-size: 12px; }
+.input_01 li { float: left; line-height: 26px; }
+input.msg { height: 20px; width: 160px; border: 1px solid #999; color: #333; line-height: 20px; padding-left: 3px; }
+span.error { text-align: right; line-height: 25px; color: #ff0000; }
+.a_close{ width: 58px; display: block; line-height: 20px; color: #fff; text-align: center; margin: 10px auto; background: url("/img/btn_confirm.jpg") no-repeat scroll 0 0 transparent;}
+/*tipswindown*/
+#windownbg { display: none; position: absolute; width: 100%; height: 100%; background: #000; top: 0; left: 0; }
+#windown-box { position: fixed; _position: absolute; background: #FFF; text-align: left; border: 1px solid #990000; }
+#windown-title { position: relative; height: 30px; overflow: hidden; background: #C61F30; }
+#windown-title h2 { position: relative; left: 10px; top: 5px; font-size: 14px; color: #fff; padding: 0; margin: 0; }
+#windown-close { position: absolute; right: 10px; top: 8px; width: 16px; height: 16px; text-indent: -10em; overflow: hidden; background: url(/img/close_pop.gif) no-repeat; cursor: pointer; }
+#windown-content { position: relative; overflow: auto; text-align: center; margin-top: 20px; color:#333; }
+#windown-content img, #windown-content iframe { display: block; }
+#windown-content .loading { position: absolute; left: 50%; top: 50%; margin-left: -8px; margin-top: -8px; }

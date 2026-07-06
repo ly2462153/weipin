@@ -1,0 +1,1 @@
+﻿$(document).ready(function() { $("#btnSendMail").click(function() { $(this).attr("disabled","disabled");$("#fmMail").submit(); }); });

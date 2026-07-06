@@ -1,0 +1,260 @@
+﻿$(document).ready(function () {
+    $.ajax({ type: "post", url: "/ajaxservice/Login.aspx", async: true, data: { ptype: "CheckUser" }, success: function (msg) { if (msg != "") { $("#ulLoginMessage").html(msg); } } });
+    $(".top_hidico").mouseover(function () { $(".top_hid").show(); });
+    $(".top_hidico").parent().parent().mouseout(function () { $(".top_hid").hide(); });
+    $(".top_hid").mouseover(function () { $(".top_hid").show(); });
+    if ($.cookie("MyShoppingCart") != null) { $("#spCount").text($.cookie("MyShoppingCart").split("|").length); }
+    $("#ulSizes li span").click(function () {
+        $("#ulSizes li span").attr("class", "chic2");
+        $(this).attr("class", "chic");
+        if (parseInt($(this).next().val()) > 0) { $("#liInventory").html("库存：<b style=\"color:#5B9630;\">有货</b>"); $("#imgAddShoppingCart").show(); } else { $("#liInventory").html("库存：<b style=\"color:#ff0000;\">暂时缺货</b>"); $("#imgAddShoppingCart").hide(); }
+    });
+    $(".detai_s img").mouseover(function () {
+        $("#imgMainPic").attr("src", $(this).attr("src"));
+        $("#imgMainPic").attr("jqimg", $(this).attr("src"));
+    });
+    $(".jqzoom").jqueryzoom({ xzoom: 270, yzoom: 270, offset: 10, position: "right", preload: 0 });
+    $.ajax({
+        type: "get", url: "/xml/goods/goodsdifference/" + $("#hidDifference").val() + ".xml", dataType: "xml",
+        success: function (xml) {
+            var _str = "";
+            var _goodsid = $("#spGoodsID").text();
+            $(xml).find("good").each(function () {
+                var _path = $(this).attr("path");
+                var _index = _path.lastIndexOf(".");
+                var _gid = $(this).attr("id");
+                _str += "<li class=\"choose_color\"><a href=\"/page/" + Math.floor(_gid / 1000) + "/goodsshow_" + _gid + ".html\" title=\"" + $(this).attr("difwords") + "\"><img class=\"";
+                if ($(this).attr("id") != _goodsid) { _str += "p_colo"; } else { _str += "p_coloron"; }
+                _str += "\" src=\"" + _path.substring(0, _index) + "_60x60" + _path.substring(_index) + "\"/></a></li>";
+            });
+            $("#ulOtherColor").html(_str);
+        }
+    });
+    $("#imgSubtract").click(function () {
+        var _count = $("#txtGoodsCount").val();
+        if (IsInteger(_count)) { if (_count <= 1) { alert("商品数量最少为1！"); } else { $("#txtGoodsCount").val(_count - 1); } } else { $("#txtGoodsCount").val(1); }
+    });
+    $("#txtGoodsCount").keyup(function () {
+        var _count = $("#txtGoodsCount").val();
+        if (!IsInteger(_count)) { alert("请输入正确的数量！"); $("#txtGoodsCount").val(1); }
+    });
+    $("#imgAdd").click(function () {
+        var _count = $("#txtGoodsCount").val();
+        if (IsInteger(_count)) { if (_count >= 99) { alert("商品数量最多为99！"); } else { $("#txtGoodsCount").val(parseInt(_count) + 1); } } else { $("#txtGoodsCount").val(1); }
+    });
+    $.ajax({
+        type: "post", url: "/ajaxservice/Goods.aspx", async: true, data: { ptype: "SelectGoodsSimilarBrowerBuyByCID", cid: $("#hidCategoryID3").val(), gid: $("#spGoodsID").text() },
+        success: function (msg) { if (msg != "") { var _browserbuy = msg.split("|")[0]; var _similar = msg.split("|")[1]; $("#divSimilar").html(_similar); $("#divBrowserBuy").html(_browserbuy); } }
+    });
+    $("#imgAddShoppingCart").click(function () {
+        var _sizesres = 0;
+        if ($("#ulSizes").text() != "") {
+            $("#ulSizes li span").each(function () { if ($(this).attr("class") == "chic") { _sizesres = 1; return false; } });
+            if (_sizesres != 1) { _sizesres = 2; }
+        }
+        if (_sizesres != 2) {
+            var _goodsid = $("#spGoodsID").text();
+            var _count = $("#txtGoodsCount").val();
+            var _myshoppingcart = $.cookie("MyShoppingCart");
+            if (_myshoppingcart != "" && _myshoppingcart != null) {
+                var _goods = _myshoppingcart.split("|");
+                var _res = 0;
+                for (var i = 0; i < _goods.length; i++) {
+                    if (_goods[i].split(",")[0] == _goodsid) {
+                        if (_sizesres == 0) {
+                            _goods[i] = _goodsid + "," + (parseInt(_goods[i].split(",")[1]) + parseInt(_count)) + "," + GetPrice() + ",";
+                            _res = 1;
+                            break;
+                        }
+                        else {
+                            var _sid = $("#ulSizes li span.chic").attr("id").replace("spSizes", "");
+                            if (_goods[i].split(",")[3] == _sid) {
+                                _goods[i] = _goodsid + "," + (parseInt(_goods[i].split(",")[1]) + parseInt(_count)) + "," + GetPrice() + "," + _sid;
+                                _res = 1;
+                                break;
+                            }
+                        }
+                    }
+                }
+                if (_res == 0) {
+                    if (ShoppingCartIsFull()) { alert("购物车每次只能装30件不同的商品，当前购物车货物已满，如要继续购物，请先提交当前购物车商品或调整购物车内商品！"); }
+                    else {
+                        if (_sizesres == 0) { $.cookie("MyShoppingCart", _myshoppingcart + "|" + _goodsid + "," + _count + "," + GetPrice() + ",", { expires: 90, path: "/" }); }
+                        else { $.cookie("MyShoppingCart", _myshoppingcart + "|" + _goodsid + "," + _count + "," + GetPrice() + "," + $("#ulSizes li span.chic").attr("id").replace("spSizes", ""), { expires: 90, path: "/" }); }
+                    }
+                }
+                else {
+                    _myshoppingcart = "";
+                    for (var i = 0; i < _goods.length; i++) { if (_goods[i] != "") { _myshoppingcart += "|" + _goods[i].split(",")[0] + "," + _goods[i].split(",")[1] + "," + _goods[i].split(",")[2] + "," + _goods[i].split(",")[3]; } }
+                    $.cookie("MyShoppingCart", _myshoppingcart.substring(1), { expires: 90, path: "/" });
+                }
+            }
+            else {
+                if (_sizesres == 0) { var _myshoppingcart = $("#spGoodsID").text() + "," + _count + "," + GetPrice() + ","; }
+                else { var _myshoppingcart = $("#spGoodsID").text() + "," + _count + "," + GetPrice() + "," + $("#ulSizes li span.chic").attr("id").replace("spSizes", ""); }
+                $.cookie("MyShoppingCart", _myshoppingcart, { expires: 90, path: "/" });
+            }
+            var _goodsarr = $.cookie("MyShoppingCart").split("|");
+            var _goodscount = 0; var _goodsamount = 0;
+            for (var i = 0; i < _goodsarr.length; i++) {
+                _goodscount += parseInt(_goodsarr[i].split(",")[1]);
+                _goodsamount = Addition(_goodsamount, Multiply(_goodsarr[i].split(",")[1], _goodsarr[i].split(",")[2]));
+            }
+            $("#liGoodsCountPrice").text("购物车共" + _goodscount + "件商品，合计" + _goodsamount + "元");
+            $(".tcbox").show();
+        }
+        else { alert("请选择尺码！"); }
+    });
+    $("#imgCollectGoods").click(function () {
+        $.ajax({
+            type: "post", url: "/ajaxservice/GoodsCollect.aspx", async: true, data: { ptype: "CollectGoods", gid: $("#spGoodsID").text() },
+            success: function (msg) {
+                if (msg == "1") { $("#pCollectGoodsMessage").text("收藏成功！"); $("#divCollectGoodsAlert").show(); }
+                else if (msg == "2") { $("#pCollectGoodsMessage").text("您已经收藏过该商品！"); $("#divCollectGoodsAlert").show(); }
+                else if (msg == "3") { tipsWindown("登录", "iframe:/LoginPop.aspx?gid=" + $("#spGoodsID").text(), "380", "370", "false", "", "true", ""); }
+                else { $("#pCollectGoodsMessage").text("系统出错，收藏失败！"); $("#divCollectGoodsAlert").show(); }
+            }
+        });
+    });
+    //我的浏览
+    var _mybrowsedlist = $.cookie("MyBrowsedList");
+    if (_mybrowsedlist != "" && _mybrowsedlist != null) {
+        var _str = "";
+        var _goods = _mybrowsedlist.split("|");
+        var _goodsid = $("#spGoodsID").text();
+        var _res = 0;
+        for (var i = 0; i < _goods.length; i++) {
+            var _path = _goods[i].split(",")[3];
+            var _index = _path.lastIndexOf(".");
+            var _gid = _goods[i].split(",")[0];
+            _str += "<div class=\"assess_side01\"><div class=\"assess_sidep\"><a href=\"/page/" + Math.floor(_gid / 1000) + "/goodsshow_" + _gid + ".html\" title=\"" + _goods[i].split(",")[1] + "\" target=\"_blank\"><img src=\"" + _path.substring(0, _index) + "_60x60" + _path.substring(_index) + "\"/></a></div><ul class=\"assess_sider\"><li class=\"cp_wz\">";
+            _str += "<a href=\"/page/" + Math.floor(_gid / 1000) + "/goodsshow_" + _gid + ".html\" title=\"" + _goods[i].split(",")[1] + "\" target=\"_blank\">" + _goods[i].split(",")[1].substring(0, 14) + "</a></li><li class=\"price_n\">售价￥" + _goods[i].split(",")[2] + "</li></ul><div class=\"clear\"></div></div>";
+            if (_goods[i].split(",")[0] == _goodsid && _res == 0) { _goods[i] = ""; _res = 1; }
+        }
+        var _arrcookie = "";
+        _mybrowsedlist = "";
+        if (_res == 0) { if (_goods.length == 5) { _goods[4] = ""; } }
+        for (var i = 0; i < _goods.length; i++) { if (_goods[i] != "") { _mybrowsedlist += "|" + _goods[i].split(",")[0] + "," + _goods[i].split(",")[1] + "," + _goods[i].split(",")[2] + "," + _goods[i].split(",")[3]; } }
+        _arrcookie = _goodsid + "," + $("#h1GoodsName").text() + "," + GetPrice();
+        _arrcookie += "," + $("#imgFirstPic").attr("src") + _mybrowsedlist;
+        $.cookie("MyBrowsedList", _arrcookie, { expires: 15, path: "/" });
+        _str += "<div class=\"clear\"></div>";
+        $("#divMyBrowsedList").html(_str);
+        $("#divMyBrowsedListTag").show();
+        $("#divMyBrowsedList").show();
+    }
+    else { var _arrcookie = $("#spGoodsID").text() + "," + $("#h1GoodsName").text() + "," + GetPrice(); _arrcookie += "," + $("#imgFirstPic").attr("src"); $.cookie("MyBrowsedList", _arrcookie, { expires: 15, path: "/" }); }
+    $("#divIntTag").click(function () { $(this).siblings().attr("class", "det_tabdown"); $(this).attr("class", "det_tabon"); $(this).parent().children().each(function () { $(this).html("<a href='javascript:void(0);'>" + $(this).text() + "</a>"); }); $(this).text($(this).text()); $(".det_bbox,.det_p,.det_wxts,.det_wz,#divComment,#divCommentPaging").show(); });
+    $("#divComTag").click(function () { $(this).siblings().attr("class", "det_tabdown"); $(this).attr("class", "det_tabon"); $(this).parent().children().each(function () { $(this).html("<a href='javascript:void(0);'>" + $(this).text() + "</a>"); }); $(this).text($(this).text()); $(".det_bbox,.det_p,.det_wxts,.det_wz").hide(); $("#divComment,#divCommentPaging").show(); });
+    $("#divSerTag").click(function () { $(this).siblings().attr("class", "det_tabdown"); $(this).attr("class", "det_tabon"); $(this).parent().children().each(function () { $(this).html("<a href='javascript:void(0);'>" + $(this).text() + "</a>"); }); $(this).text($(this).text()); $(".det_bbox,.det_p,.det_wxts").hide(); $(".det_wz,#divComment,#divCommentPaging").show(); });
+    var _perpage = $("#hidPerpage").val();
+    $.ajax({
+        type: "post", url: "/ajaxservice/GoodsComments.aspx", async: true,
+        data: { ptype: "SelectGoodsCommentsTopByGID", gid: $("#spGoodsID").text(), perpage: _perpage },
+        success: function (msg) {
+            if (msg != "") {
+                $("#aWantComment").attr("href", "/myhome/GoodsComments.aspx?gid=" + $("#spGoodsID").text());
+                var _arr = msg.split("|");
+                var _datatotal = _arr[0];
+                var _goodcomment = _arr[1];
+                var _mediumcomment = _arr[2];
+                var _badcomment = _arr[3];
+                var _totalpoints = _arr[4];
+                var _str = _arr[5];
+                $("#hidDataTotal").val(_datatotal);
+                if (_datatotal != 0) {
+                    $("#spPraiseRate").text(Math.round(parseInt(_goodcomment) / parseInt(_datatotal) * 100) + "%好评率");
+                    var _commentavg = parseInt(_totalpoints) / parseInt(_datatotal);
+                    var _starpic = "";
+                    if (_commentavg >= 4.5) { _starpic = "url(/img/star5.gif)"; } else if (_commentavg >= 3.5 && _commentavg < 4.5) { _starpic = "url(/img/star4.gif)"; } else if (_commentavg >= 2.5 && _commentavg < 3.5) { _starpic = "url(/img/star3.gif)"; } else if (_commentavg >= 1.5 && _commentavg < 2.5) { _starpic = "url(/img/star2.gif)"; } else if (_commentavg > 0 && _commentavg < 1.5) { _starpic = "url(/img/star1.gif)"; }
+                } else { _starpic = "url(/img/star0.gif)"; $("#spPraiseRate").hide(); _str += "暂无相关评论！"; }
+                $("#aComment").css("background-image", _starpic);
+                $("#aComment").text("(已有" + _datatotal + "人评论)");
+                $("#spAllComment").text(_datatotal);
+                $("#spGoodComment").text(_goodcomment);
+                $("#spMediumComment").text(_mediumcomment);
+                $("#spBadComment").text(_badcomment);
+                $("#divAllComment").html(_str);
+                var optInit = getOptions();
+                if (parseInt(_datatotal) > parseInt(_perpage)) { $("#divAllCommentPaging").pagination(_datatotal, optInit); }
+            }
+        }
+    });
+});
+function getOptions(id) {
+    if (id == null) { var opt = { callback: pageselectCallback }; }
+    else { var opt = { callback: GetCommentCallback }; }
+    opt["items_per_page"] = $("#hidPerpage").val(); opt["next_text"] = "下一页"; opt["num_display_entries"] = parseInt(11); opt["num_edge_entries"] = parseInt(0); opt["prev_text"] = "上一页"; opt["link_to"] = "#divComment";
+    var htmlspecialchars = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" };
+    $.each(htmlspecialchars, function (k, v) { opt.prev_text = opt.prev_text.replace(k, v); opt.next_text = opt.next_text.replace(k, v); });
+    return opt;
+}
+function pageselectCallback(page_index, jq) {
+    var _perpage = $("#hidPerpage").val();
+    var _nowpage = parseInt(page_index) + parseInt(1);
+    if ($("#hidIsFirstLoad").val() != "1") {
+        var _gid = $("#spGoodsID").text();
+        $("#divAllComment").html("<img src=\"/img/loading.gif\" alt=\"加载中...\" style=\"margin:150px 0 0 380px;\"/>");
+        $.ajax({
+            type: "post", url: "/ajaxservice/GoodsComments.aspx", async: true,
+            data: { ptype: "SelectGoodsCommentsByGID", gid: _gid, nowpage: _nowpage, perpage: _perpage },
+            success: function (msg) { if (msg != "") { $("#divAllComment").html(msg); } }
+        });
+    }
+    else { $("#hidIsFirstLoad").val(0); }
+    return true;
+}
+function GetCommentCallback(page_index, jq) {
+    var _perpage = $("#hidPerpage").val();
+    var _nowpage = parseInt(page_index) + parseInt(1);
+    var _gid = $("#spGoodsID").text();
+    var _thisobj = $("#divCommentPaging").children("div:visible").not(".page");
+    $(_thisobj).html("<img src=\"/img/loading.gif\" alt=\"加载中...\" style=\"margin:150px 0 0 380px;\"/>");
+    $.ajax({
+        type: "post", url: "/ajaxservice/GoodsComments.aspx", async: true,
+        data: { ptype: "SelectGoodsCommentsTypeByGID", gid: _gid, nowpage: _nowpage, perpage: _perpage, typeid: $("#hidCommentTypeID").val() },
+        success: function (msg) { if (msg != "") { $(_thisobj).html(msg); } }
+    });
+    return true;
+}
+function GetComment(id, thisobj) {
+    var _siblingobj = $(thisobj).siblings(".det_tabon");
+    $(_siblingobj).attr("class", "det_tabdown");
+    $(_siblingobj).html("<a href=\"javascript:void(0);\">" + $(_siblingobj).html() + "</a>");
+    if ($(thisobj).children("a").attr("href") != null) {
+        $(thisobj).attr("class", "det_tabon");
+        $(thisobj).html($(thisobj).children().html());
+    }
+    $("#divCommentPaging").children("div").hide();
+    var _divid = $(thisobj).children("span").attr("id").replace("sp", "div");
+    if ($(thisobj).children("span").text() != 0) {
+        var _perpage = $("#hidPerpage").val();
+        var _datatotal = $(thisobj).children("span").text();
+        $("#" + _divid).show();
+        $("#hidCommentTypeID").val(id);
+        if ($("#" + _divid).text() == "") {
+            var optInit = getOptions(1);
+            $("#" + _divid + "Paging").pagination(_datatotal, optInit);
+        }
+        if (parseInt(_datatotal) > parseInt(_perpage)) { $("#" + _divid + "Paging").show(); }
+    }
+    else { $("#" + _divid).show(); $("#" + _divid).text("暂无相关评论！"); }
+}
+function ClearMyBrowsedList() {
+    $.cookie("MyBrowsedList", null, { expires: 15, path: "/" });
+    $("#divMyBrowsedList").css("padding", "5px 0 0px 12px");
+    $("#divMyBrowsedList").html("<span style=\"color:#ccc;\">暂无记录!</span>");
+}
+function ShoppingCartIsFull() {
+    var _myshoppingcart = $.cookie("MyShoppingCart");
+    if (_myshoppingcart != "" && _myshoppingcart != null) { var _arr = _myshoppingcart.split("|"); if (_arr.length >= 30) { return true; } else { return false; } } else { return false; }
+}
+function GetPrice() { if ($("#spDiscountPrice").text() != "") { return $("#spDiscountPrice").text().replace("￥", ""); } else { return $("#spPrice").text().replace("￥", ""); } }
+function CloseAddShopping() { $(".tcbox").hide(); }
+function CloseCollectAlert() { $("#divCollectGoodsAlert").hide(); }
+//是否是正整数
+function IsInteger(s) { var patrn = /^[0-9]*[1-9][0-9]*$/; if (!patrn.exec(s)) { return false; } else { return true; } }
+//计算浮点数乘法
+function Multiply(arg1, arg2) { arg1 = String(arg1); var i = arg1.length - arg1.indexOf(".") - 1; i = (i >= arg1.length) ? 0 : i; arg2 = String(arg2); var j = arg2.length - arg2.indexOf(".") - 1; j = (j >= arg2.length) ? 0 : j; return arg1.replace(".", "") * arg2.replace(".", "") / Math.pow(10, i + j); }
+function Addition(arg1, arg2) { var r1, r2, m; try { r1 = arg1.toString().split(".")[1].length } catch (e) { r1 = 0 } try { r2 = arg2.toString().split(".")[1].length } catch (e) { r2 = 0 } m = Math.pow(10, Math.max(r1, r2)); return (arg1 * m + arg2 * m) / m; }
+function CollectFavorite() { var a = "http://www.weipin365.com/"; var b = "微品网上商城-心动小商品"; if (document.all) { window.external.AddFavorite(a, b) } else if (window.sidebar) { window.sidebar.addPanel(b, a, "") } else { alert("对不起，您的浏览器不支持此操作!\n请您使用菜单栏或Ctrl+D收藏本站。") } }

@@ -1,0 +1,10 @@
+﻿$(document).ready(function() {
+    $("input[name='key']").val("ZAKKA 马口铁 收纳");
+    $(".top_hidico").mouseover(function() { $(".top_hid").show(); });
+    $(".top_hidico").parent().parent().mouseout(function() { $(".top_hid").hide(); });
+    $(".top_hid").mouseover(function() { $(".top_hid").show(); });
+    if($.cookie("MyShoppingCart")!=null) { $("#spCount").text($.cookie("MyShoppingCart").split("|").length); }
+    $(".input_s").focus(function() { if($(this).val()=="ZAKKA 马口铁 收纳") { $(this).val("");$(this).css("color","#000"); } });
+    $(".input_s").blur(function() { if($(this).val()=="") { $(this).val("ZAKKA 马口铁 收纳");$(this).css("color","#999"); } });
+});
+function CollectFavorite() { var a="http://www.weipin365.com/";var b="微品网上商城-心动小商品";if(document.all) { window.external.AddFavorite(a,b) } else if(window.sidebar) { window.sidebar.addPanel(b,a,"") } else { alert("对不起，您的浏览器不支持此操作!\n请您使用菜单栏或Ctrl+D收藏本站。") } }

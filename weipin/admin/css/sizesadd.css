@@ -1,0 +1,15 @@
+﻿#aside fieldset { border: 1px solid #bfbfbf; padding: 0 5px 0 10px; margin: 0 0 10px 10px; }
+#aside fieldset p { margin: 10px 0 10px 0; }
+table.nostyle, table.nostyle th, table.nostyle td { border: 0 !important; }
+.nostyle .tdL { text-align: right; width: 60px; }
+table.nostyle td div ul { margin: 0; padding: 0; }
+table.nostyle td div ul li { list-style-type: none; float: left; }
+table.nostyle th { background: none !important; text-align: left !important; }
+table.nostyle th, table.nostyle td { padding: 3px 5px !important; }
+table label.error { color: #ff0000; font-size: 12px; }
+table span.error { color: #ff0000; font-size: 12px; }
+.input-text { font: 12px; width: 300px; height: 25px; }
+.input-text-02 { font: 12px; }
+.input-submit { padding: 3px; font-size: 120%; }
+.input-submit-02 { padding: 1px; font-size: 100%; }
+.nostyle .box { border: 1px solid #CCC; background: #FFF; padding: 8px; margin: 5px; clear: both; }

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Attributes>
+  <Attribute name="houdu" value="1">
+    <AttributeValues name="bo" value="1" />
+    <AttributeValues name="hou" value="2" />
+    <AttributeValues name="jiahou" value="3" />
+  </Attribute>
+  <Attribute name="caizhi" value="2">
+    <AttributeValues name="全棉" value="4" />
+    <AttributeValues name="棉涤混纺" value="7" />
+  </Attribute>
+  <Attribute name="领xing" value="3">
+    <AttributeValues name="立领" value="5" />
+    <AttributeValues name="翻领" value="6" />
+    <AttributeValues name="圆领" value="16" />
+  </Attribute>
+  <Attribute name="xiuchang" value="4">
+    <AttributeValues name="长袖" value="8" />
+  </Attribute>
+  <Attribute name="图案hw" value="5">
+    <AttributeValues name="纯s" value="9" />
+    <AttributeValues name="条w" value="10" />
+  </Attribute>
+</Attributes>

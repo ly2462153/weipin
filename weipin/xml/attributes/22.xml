@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Attributes>
+  <Attribute name="类别" value="15">
+    <AttributeValues name="xingp" value="23" />
+    <AttributeValues name="mei" value="24" />
+    <AttributeValues name="hongshug" value="25" />
+  </Attribute>
+</Attributes>

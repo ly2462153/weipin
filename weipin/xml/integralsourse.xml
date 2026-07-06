@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<integralsource>
+  <source name="评论商品" value="1" />
+  <source name="购买商品" value="2" />
+  <source name="验证邮箱" value="3" />
+</integralsource>

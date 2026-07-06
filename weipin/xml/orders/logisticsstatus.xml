@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LogisticsStatus><!--暂未使用-->
+  <Status>
+    <StatusID>1</StatusID>
+    <StatusName>处理中</StatusName>
+  </Status>
+  <Status>
+    <StatusID>2</StatusID>
+    <StatusName>已发货</StatusName>
+  </Status>
+  <Status>
+    <StatusID>3</StatusID>
+    <StatusName>已完成</StatusName>
+  </Status>
+</LogisticsStatus>

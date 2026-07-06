@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Attributes>
+  <Attribute name="容量" value="20">
+    <AttributeValues name="200ml-300ml" value="34" />
+    <AttributeValues name="301ml-400ml" value="35" />
+    <AttributeValues name="401ml-500ml" value="41" />
+  </Attribute>
+  <Attribute name="材质" value="21">
+    <AttributeValues name="骨瓷" value="36" />
+    <AttributeValues name="陶瓷" value="40" />
+  </Attribute>
+  <Attribute name="风格" value="22">
+    <AttributeValues name="可爱/卡通" value="37" />
+    <AttributeValues name="田园风格" value="38" />
+    <AttributeValues name="简约" value="39" />
+  </Attribute>
+</Attributes>

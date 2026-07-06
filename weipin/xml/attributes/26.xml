@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Attributes>
+  <Attribute name="另行" value="18">
+    <AttributeValues name="lil" value="30" />
+    <AttributeValues name="fanli" value="31" />
+  </Attribute>
+  <Attribute name="菜汁" value="19">
+    <AttributeValues name="劝勉" value="32" />
+    <AttributeValues name="miandi" value="33" />
+  </Attribute>
+</Attributes>

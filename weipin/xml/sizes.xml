@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sizes>
+  <size name="均码" value="1" />
+  <size name="35~36" value="6" />
+  <size name="37~39" value="7" />
+  <size name="40~42" value="8" />
+  <size name="43~44" value="9" />
+  <size name="S" value="2" />
+  <size name="M" value="3" />
+  <size name="L" value="4" />
+  <size name="XL" value="5" />
+</sizes>

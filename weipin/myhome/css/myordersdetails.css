@@ -1,0 +1,15 @@
+﻿.main_c { overflow: hidden; }
+.main_c h1 { height: 33px; line-height: 33px; color: #CC0000; padding-left: 16px; font-size: 14px; margin: 0px; }
+.main_right { width: 810px; height: auto; overflow: hidden; }
+.main_right h1 { border-color: #E6E6E6 #E6E6E6 #C30000; border-style: solid; border-width: 1px 1px 2px; height: 33px; line-height: 33px; margin-bottom: 10px; color: #CC0000; padding-left: 16px; font-size: 14px; margin: 0px; }
+.main_right .div_bottom { border-top: 1px solid #E6E6E6; width: 100%; height: auto; overflow: hidden; padding:6px 0 0 8px; }
+.div_bottom table { border-collapse: collapse; width: 100%; height: auto; border-left: none; border: 1px solid #E6E6E6; border-top: none; }
+.div_bottom table th { background: url("/img/tb-th.2011.gif") repeat-x scroll 0 0 #F7F7F7; color: #666666; font-weight: normal; height: 30px; }
+table tr{ line-height:26px; }
+.div_bottom table td { border-color: #E6E6E6; border-style: solid; border-width: 1px 0 0 1px; border: 1px solid #e6e6e6; padding: 5px 4px; text-align: center; }
+.div_bottom ul li{ line-height:24px; }
+.div_bottom a { float: left; }
+.amount{ padding:10px; text-align:right; }
+a.ordr_but {width: 92px; height: 30px; display: block; float: left; line-height: 30px; border-color:#690000; text-align: center; color: #fff; background: url("/img/openbox_but.jpg") no-repeat scroll 0 0 transparent; }
+label.error { color: #ff0000; line-height: 30px; margin-left: 5px; }
+.logo_input { height: 26px; line-height: 22px; border: solid 1px #C9C9C9; }

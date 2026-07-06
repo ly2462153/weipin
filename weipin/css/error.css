@@ -1,0 +1,9 @@
+﻿.errormian { width: 970px; height: 400px; background: url(/img/error/errorbg.jpg) repeat-x; font-size: 12px; margin: 0 auto; font-family: '宋体'; margin-top: 5px; }
+.roll { width: 223px; height: 228px; float: left; margin-top: 70px; margin-left: 230px; display: inline; }
+.text_l { width: auto; height: 228px; float: left; margin-top: 90px; margin-left: 20px; }
+.tips { width: 174px; height: 60px; padding: 15px 0px 0px 00px; text-align: center; font-weight: bold; color: #fff; font-size: 26px; background-image: url(/img/error/tips.jpg); }
+.tip_cont { padding-top: 10px; }
+.tip_cont p { margin: 0px; padding: 0px; line-height: 30px; }
+.tip_cont p span { color: #cc3300; }
+.tip_cont p a { text-decoration: underline; color: #256204; }
+.tip_cont p a:hover { text-decoration: underline; color: #256204; }

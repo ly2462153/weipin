@@ -1,0 +1,1362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D0EFE4D8-10D9-4E79-8235-6F4413D4F50E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>weipin</RootNamespace>
+    <AssemblyName>weipin</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin\ajaxservice\Areas.aspx" />
+    <Content Include="admin\ajaxservice\Attributes.aspx" />
+    <Content Include="admin\ajaxservice\AttributeValues.aspx" />
+    <Content Include="admin\ajaxservice\Categories.aspx" />
+    <Content Include="admin\ajaxservice\Couriers.aspx" />
+    <Content Include="admin\ajaxservice\Goods.aspx" />
+    <Content Include="admin\ajaxservice\GoodsComments.aspx" />
+    <Content Include="admin\ajaxservice\GoodsPictures.aspx" />
+    <Content Include="admin\ajaxservice\Orders.aspx" />
+    <Content Include="admin\ajaxservice\OrdersRemarks.aspx" />
+    <Content Include="admin\ajaxservice\Orders_Goods.aspx" />
+    <Content Include="admin\ajaxservice\Sizes.aspx" />
+    <Content Include="admin\ajaxservice\UploadPicture.aspx" />
+    <Content Include="admin\Areas.aspx" />
+    <Content Include="admin\Attributes.aspx" />
+    <Content Include="admin\AttributeValues.aspx" />
+    <Content Include="admin\Cagegories.aspx" />
+    <Content Include="admin\controls\headadmin.ascx" />
+    <Content Include="admin\CouriersAdd.aspx" />
+    <Content Include="admin\CouriersList.aspx" />
+    <Content Include="admin\CouriersUpdate.aspx" />
+    <Content Include="admin\css\1col.css" />
+    <Content Include="admin\css\2col.css" />
+    <Content Include="admin\css\areas.css" />
+    <Content Include="admin\css\attributes.css" />
+    <Content Include="admin\css\attributevalues.css" />
+    <Content Include="admin\css\cagegories.css" />
+    <Content Include="admin\css\courieradd.css" />
+    <Content Include="admin\css\courierslist.css" />
+    <Content Include="admin\css\couriersupdate.css" />
+    <Content Include="admin\css\goodsadd.css" />
+    <Content Include="admin\css\goodsbatchupdate.css" />
+    <Content Include="admin\css\goodscommentslist.css" />
+    <Content Include="admin\css\goodslist.css" />
+    <Content Include="admin\css\goodsshow.css" />
+    <Content Include="admin\css\goodssupplylist.css" />
+    <Content Include="admin\css\goodsupdate.css" />
+    <Content Include="admin\css\headadmin.css" />
+    <Content Include="admin\css\jquery\jquery.treeview.css" />
+    <Content Include="admin\css\login.css" />
+    <Content Include="admin\css\main-ie6.css" />
+    <Content Include="admin\css\orderschangegoodslist.css" />
+    <Content Include="admin\css\orderslist.css" />
+    <Content Include="admin\css\ordersoutlibrarylist.css" />
+    <Content Include="admin\css\ordersremarksadd.css" />
+    <Content Include="admin\css\ordersremarksedit.css" />
+    <Content Include="admin\css\ordersremarkslist.css" />
+    <Content Include="admin\css\ordersreturngoodslist.css" />
+    <Content Include="admin\css\orderssearchgoodslist.css" />
+    <Content Include="admin\css\sizesadd.css" />
+    <Content Include="admin\css\sizeslist.css" />
+    <Content Include="admin\css\sizesupdate.css" />
+    <Content Include="admin\css\creategoodsindex.css" />
+    <Content Include="admin\css\ordersprint.css" />
+    <Content Include="admin\css\sendadvertisementmail.css" />
+    <Content Include="admin\GoodsAdd.aspx" />
+    <Content Include="admin\GoodsBatchUpdate.aspx" />
+    <Content Include="admin\GoodsCommentsList.aspx" />
+    <Content Include="admin\GoodsShow.aspx" />
+    <Content Include="admin\GoodsSupplyList.aspx" />
+    <Content Include="admin\GoodsUpdate.aspx" />
+    <Content Include="admin\img\add.jpg" />
+    <Content Include="admin\img\bgButtonLogin.jpg" />
+    <Content Include="admin\img\bgLoginBox.jpg" />
+    <Content Include="admin\img\content-h1.gif" />
+    <Content Include="admin\img\del.jpg" />
+    <Content Include="admin\img\del16.jpg" />
+    <Content Include="admin\img\edit.jpg" />
+    <Content Include="admin\img\editattribute.jpg" />
+    <Content Include="admin\img\fork.jpg" />
+    <Content Include="admin\img\loading.gif" />
+    <Content Include="admin\img\menu-left.gif" />
+    <Content Include="admin\img\menu-right.gif" />
+    <Content Include="admin\img\menu.gif" />
+    <Content Include="admin\img\separator.gif" />
+    <Content Include="admin\img\submenu-active.gif" />
+    <Content Include="admin\img\submenu-sub.gif" />
+    <Content Include="admin\img\switcher-1col.gif" />
+    <Content Include="admin\img\switcher-2col.gif" />
+    <Content Include="admin\img\tray-logout.gif" />
+    <Content Include="admin\img\tray.gif" />
+    <Content Include="admin\img\treeview-default-line.gif" />
+    <Content Include="admin\img\treeview-default.gif" />
+    <Content Include="admin\img\uploadpic.gif" />
+    <Content Include="admin\js\adduploadfiles.js" />
+    <Content Include="admin\js\areas.js" />
+    <Content Include="admin\js\attributes.js" />
+    <Content Include="admin\js\attributevalues.js" />
+    <Content Include="admin\js\cagegories.js" />
+    <Content Include="admin\js\couriersadd.js" />
+    <Content Include="admin\js\courierslist.js" />
+    <Content Include="admin\js\couriersupdate.js" />
+    <Content Include="admin\js\goodsadd.js" />
+    <Content Include="admin\js\goodsbatchupdate.js" />
+    <Content Include="admin\js\goodscommentslist.js" />
+    <Content Include="admin\js\goodslist.js" />
+    <Content Include="admin\js\goodsshow.js" />
+    <Content Include="admin\js\goodsupdate.js" />
+    <Content Include="admin\js\orderschangegoodslist.js" />
+    <Content Include="admin\js\orderslist.js" />
+    <Content Include="admin\js\ordersoutlibrarylist.js" />
+    <Content Include="admin\js\ordersremarksadd.js" />
+    <Content Include="admin\js\ordersremarksedit.js" />
+    <Content Include="admin\js\ordersremarkslist.js" />
+    <Content Include="admin\js\ordersreturngoodslist.js" />
+    <Content Include="admin\js\orderssearchgoodslist.js" />
+    <Content Include="admin\js\sizesadd.js" />
+    <Content Include="admin\js\sizeslist.js" />
+    <Content Include="admin\js\sizesupdate.js" />
+    <Content Include="admin\js\switcher.js" />
+    <Content Include="admin\js\updateuploadfiles.js" />
+    <Content Include="admin\js\sendadvertisementmail.js" />
+    <Content Include="admin\Login.aspx" />
+    <Content Include="admin\OrdersChangeGoodsList.aspx" />
+    <Content Include="admin\OrdersList.aspx" />
+    <Content Include="admin\OrdersOutLibraryList.aspx" />
+    <Content Include="admin\OrdersPrint.aspx" />
+    <Content Include="admin\OrdersRemarksAdd.aspx" />
+    <Content Include="admin\OrdersRemarksEdit.aspx" />
+    <Content Include="admin\OrdersRemarksList.aspx" />
+    <Content Include="admin\OrdersReturnGoodsList.aspx" />
+    <Content Include="admin\OrdersSearchGoodsList.aspx" />
+    <Content Include="admin\SizesAdd.aspx" />
+    <Content Include="admin\SizesList.aspx" />
+    <Content Include="admin\SizesUpdate.aspx" />
+    <Content Include="admin\CreateGoodsIndex.aspx" />
+    <Content Include="admin\SendAdvertisementMail.aspx" />
+    <Content Include="ajaxservice\Areas.aspx" />
+    <Content Include="ajaxservice\Goods.aspx" />
+    <Content Include="ajaxservice\GoodsComments.aspx" />
+    <Content Include="ajaxservice\GoodsCollect.aspx" />
+    <Content Include="ajaxservice\Users.aspx" />
+    <Content Include="ajaxservice\VerifyCode.aspx" />
+    <Content Include="ajaxservice\MyShippingAddresses.aspx" />
+    <Content Include="ajaxservice\Orders.aspx" />
+    <Content Include="controls\bottom.ascx" />
+    <Content Include="controls\top.ascx" />
+    <Content Include="controls\myhome.ascx" />
+    <Content Include="alipay\default.aspx" />
+    <Content Include="alipay\images\alipay.gif" />
+    <Content Include="alipay\images\new-btn-fixed.png" />
+    <Content Include="alipay\log\log.txt" />
+    <Content Include="alipay\notify_url.aspx" />
+    <Content Include="alipay\readme.txt" />
+    <Content Include="alipay\return_url.aspx" />
+    <Content Include="css\categorygoods.css" />
+    <Content Include="css\error.css" />
+    <Content Include="css\goodsshow.css" />
+    <Content Include="css\index.css" />
+    <Content Include="css\jquery\jqzoom.css" />
+    <Content Include="css\login.css" />
+    <Content Include="css\ordercheck.css" />
+    <Content Include="css\shoppingcart.css" />
+    <Content Include="css\top.css" />
+    <Content Include="css\bottom.css" />
+    <Content Include="css\goodslist.css" />
+    <Content Include="css\register.css" />
+    <Content Include="css\loginpop.css" />
+    <Content Include="css\loginpopordercheck.css" />
+    <Content Include="css\ordersuccess.css" />
+    <Content Include="css\forgetpassword.css" />
+    <Content Include="css\forgetpasswordmessage.css" />
+    <Content Include="css\myhome.css" />
+    <Content Include="css\search.css" />
+    <Content Include="css\newgoodslist.css" />
+    <Content Include="css\discountgoodslist.css" />
+    <Content Include="dll\Lucene.Net.dll" />
+    <Content Include="dll\PanGu.dll" />
+    <Content Include="dll\PanGu.HighLight.dll" />
+    <Content Include="dll\PanGu.Lucene.Analyzer.dll" />
+    <Content Include="dll\PanGu.xml" />
+    <Content Include="Error.aspx" />
+    <Content Include="file\images\advertisement\category_adm63.jpg" />
+    <Content Include="file\images\advertisement\category_adm17.jpg" />
+    <Content Include="file\images\advertisement\category_adm3.jpg" />
+    <Content Include="file\images\advertisement\category_adm20.jpg" />
+    <Content Include="file\images\advertisement\kaozhenjingzhen.jpg" />
+    <Content Include="file\images\advertisement\yilupingan.jpg" />
+    <Content Include="file\images\homepage\banner1.jpg" />
+    <Content Include="file\images\homepage\banner2.jpg" />
+    <Content Include="file\images\homepage\banner3.jpg" />
+    <Content Include="file\images\homepage\banner4.jpg" />
+    <Content Include="file\images\homepage\mianyunfei.jpg" />
+    <Content Include="file\images\advertisement\maozi.jpg" />
+    <Content Include="file\Release\CustomRuleExample.dll" />
+    <Content Include="file\Release\CustomRuleExample.pdb" />
+    <Content Include="file\Release\Demo.exe" />
+    <Content Include="file\Release\Demo.pdb" />
+    <Content Include="file\Release\Demo.vshost.exe" />
+    <Content Include="file\Release\DictManage.exe" />
+    <Content Include="file\Release\DictManage.pdb" />
+    <Content Include="file\Release\PanGu.dll" />
+    <Content Include="file\Release\PanGu.HighLight.dll" />
+    <Content Include="file\Release\PanGu.HighLight.pdb" />
+    <Content Include="file\Release\PanGu.pdb" />
+    <Content Include="file\Release\PanGu.xml" />
+    <Content Include="file\Release\PosDisplayCtrl.dll" />
+    <Content Include="file\Release\PosDisplayCtrl.pdb" />
+    <Content Include="ForgetPassword.aspx" />
+    <Content Include="help\css\mysuggest.css" />
+    <Content Include="help\css\shoppingflow.css" />
+    <Content Include="help\css\serviceclause.css" />
+    <Content Include="help\css\integralintroduction.css" />
+    <Content Include="help\css\usualquestion.css" />
+    <Content Include="help\css\deliverypay.css" />
+    <Content Include="help\css\delivery.css" />
+    <Content Include="help\css\freightfree.css" />
+    <Content Include="help\css\returnpolicy.css" />
+    <Content Include="help\css\returnflow.css" />
+    <Content Include="help\css\contactservice.css" />
+    <Content Include="help\css\offsetprice.css" />
+    <Content Include="help\css\aboutus.css" />
+    <Content Include="help\css\businesscooperation.css" />
+    <Content Include="help\js\mysuggest.js" />
+    <Content Include="help\js\help.js" />
+    <Content Include="help\MySuggest.aspx" />
+    <Content Include="help\shoppingflow.html" />
+    <Content Include="help\serviceclause.html" />
+    <Content Include="help\integralintroduction.html" />
+    <Content Include="help\usualquestion.html" />
+    <Content Include="help\deliverypay.html" />
+    <Content Include="help\delivery.html" />
+    <Content Include="help\freightfree.html" />
+    <Content Include="help\returnpolicy.html" />
+    <Content Include="help\returnflow.html" />
+    <Content Include="help\contactservice.html" />
+    <Content Include="help\offsetprice.html" />
+    <Content Include="help\aboutus.html" />
+    <Content Include="help\businesscooperation.html" />
+    <Content Include="img\alipay.gif" />
+    <Content Include="img\alipay_pay.gif" />
+    <Content Include="img\arrow3.gif" />
+    <Content Include="img\arrow_down.gif" />
+    <Content Include="img\arrow_up.gif" />
+    <Content Include="img\bg-icon1.gif" />
+    <Content Include="img\bottom_ico.gif" />
+    <Content Include="img\bottom_ico1.gif" />
+    <Content Include="img\bottom_ico2.gif" />
+    <Content Include="img\bottom_ico3.gif" />
+    <Content Include="img\btn_confirm.jpg" />
+    <Content Include="img\butbg.jpg" />
+    <Content Include="img\butRegister.jpg" />
+    <Content Include="img\but_frgwc.gif" />
+    <Content Include="img\but_frgwc.jpg" />
+    <Content Include="img\but_gn01.gif" />
+    <Content Include="img\but_jies.jpg" />
+    <Content Include="img\but_djckxq.gif" />
+    <Content Include="img\but_jxgw.gif" />
+    <Content Include="img\but_jxgw.jpg" />
+    <Content Include="img\but_qjs.gif" />
+    <Content Include="img\but_qjs2.gif" />
+    <Content Include="img\but_sure.gif" />
+    <Content Include="img\but_tijiao.jpg" />
+    <Content Include="img\b_subm.jpg" />
+    <Content Include="img\close.gif" />
+    <Content Include="img\close_pop.gif" />
+    <Content Include="img\dd_arrow01.gif" />
+    <Content Include="img\dd_arrow02.gif" />
+    <Content Include="img\dd_arrow03.gif" />
+    <Content Include="img\dd_arrow04.gif" />
+    <Content Include="img\dd_arrow05.gif" />
+    <Content Include="img\detai_tab.jpg" />
+    <Content Include="img\error\errorbg.jpg" />
+    <Content Include="img\error\roll.jpg" />
+    <Content Include="img\error\tips.jpg" />
+    <Content Include="img\go_alipay.gif" />
+    <Content Include="img\guanbi.gif" />
+    <Content Include="img\gwc.gif" />
+    <Content Include="img\help\getintegral.jpg" />
+    <Content Include="img\help\returnflow1.jpg" />
+    <Content Include="img\help\returnflow2.jpg" />
+    <Content Include="img\ico_c.gif" />
+    <Content Include="img\ico_mail.gif" />
+    <Content Include="img\ico_type1.gif" />
+    <Content Include="img\ico_type2.gif" />
+    <Content Include="img\ico_type3.gif" />
+    <Content Include="img\ico_type4.gif" />
+    <Content Include="img\ico_yjgz.gif" />
+    <Content Include="img\in_lefpl.png" />
+    <Content Include="img\jgz.jpg" />
+    <Content Include="img\jia.gif" />
+    <Content Include="img\jian.gif" />
+    <Content Include="img\lcjs_titbg.jpg" />
+    <Content Include="img\line.gif" />
+    <Content Include="img\loading.gif" />
+    <Content Include="img\logo.gif" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\logo1.gif" />
+    <Content Include="img\logo.jpg" />
+    <Content Include="img\logolengthways.gif" />
+    <Content Include="img\logowatermark.png" />
+    <Content Include="img\mail.jpg" />
+    <Content Include="img\maillogo.jpg" />
+    <Content Include="img\logo_but01.jpg" />
+    <Content Include="img\logo_but03.jpg" />
+    <Content Include="img\logo_tit.jpg" />
+    <Content Include="img\openbox_but.jpg" />
+    <Content Include="img\openbox_tab01.gif" />
+    <Content Include="img\openbox_tab02.gif" />
+    <Content Include="img\openbox_tabbg.jpg" />
+    <Content Include="img\openbox_tit.jpg" />
+    <Content Include="img\ordrtab_tit.jpg" />
+    <Content Include="img\ordr_butbg.jpg" />
+    <Content Include="img\reg_right.gif" />
+    <Content Include="img\ruan.gif" />
+    <Content Include="img\s0.gif" />
+    <Content Include="img\s1.gif" />
+    <Content Include="img\scgsp.gif" />
+    <Content Include="img\sec_menur.jpg" />
+    <Content Include="img\sec_menur2.jpg" />
+    <Content Include="img\sec_menurf.jpg" />
+    <Content Include="img\sec_menuru.jpg" />
+    <Content Include="img\sec_menutit.jpg" />
+    <Content Include="img\sec_tit01.jpg" />
+    <Content Include="img\sellingpoint.jpg" />
+    <Content Include="img\shopbg_l.jpg" />
+    <Content Include="img\shopbg_m.jpg" />
+    <Content Include="img\shopbg_r.jpg" />
+    <Content Include="img\help\lcjs_1.jpg" />
+    <Content Include="img\help\lcjs_2.jpg" />
+    <Content Include="img\help\lcjs_3.jpg" />
+    <Content Include="img\help\lcjs_4.jpg" />
+    <Content Include="img\help\lcjs_5.jpg" />
+    <Content Include="img\help\lcjs_6.jpg" />
+    <Content Include="img\help\lcjs_7.jpg" />
+    <Content Include="img\help\lcjs_8.jpg" />
+    <Content Include="img\sinaweibo.gif" />
+    <Content Include="img\star.jpg" />
+    <Content Include="img\star0.gif" />
+    <Content Include="img\star1.gif" />
+    <Content Include="img\star2.gif" />
+    <Content Include="img\star3.gif" />
+    <Content Include="img\star4.gif" />
+    <Content Include="img\star5.gif" />
+    <Content Include="img\suer.jpg" />
+    <Content Include="img\tab.gif" />
+    <Content Include="img\tabdown.jpg" />
+    <Content Include="img\tabon.jpg" />
+    <Content Include="img\tag_bg.jpg" />
+    <Content Include="img\tb-th.2011.gif" />
+    <Content Include="img\telephone.jpg" />
+    <Content Include="img\tex_b.jpg" />
+    <Content Include="img\tex_bg.jpg" />
+    <Content Include="img\tex_t.jpg" />
+    <Content Include="img\topbg.jpg" />
+    <Content Include="img\type_b.jpg" />
+    <Content Include="img\type_line.jpg" />
+    <Content Include="img\use.gif" />
+    <Content Include="img\verifyfail.jpg" />
+    <Content Include="img\verifysuccess.jpg" />
+    <Content Include="img\yjjy_bg.jpg" />
+    <Content Include="img\zhekou.gif" />
+    <Content Include="img\zhekou.png" />
+    <Content Include="index.html" />
+    <Content Include="ajaxservice\Login.aspx" />
+    <Content Include="img\top_arrow.gif" />
+    <Content Include="GoodsList.aspx" />
+    <Content Include="img\arrow_syr.gif" />
+    <Content Include="img\head.jpg" />
+    <Content Include="img\ico_p1.gif" />
+    <Content Include="img\ico_s.gif" />
+    <Content Include="img\index_tit01.jpg" />
+    <Content Include="img\index_tit02.jpg" />
+    <Content Include="img\index_tit03.jpg" />
+    <Content Include="img\menudown_01.jpg" />
+    <Content Include="img\menudown_02.jpg" />
+    <Content Include="img\menudown_03.jpg" />
+    <Content Include="img\menul_bg.jpg" />
+    <Content Include="img\menuon_01.jpg" />
+    <Content Include="img\menuon_02.jpg" />
+    <Content Include="img\menuon_03.jpg" />
+    <Content Include="img\menu_sebg.jpg" />
+    <Content Include="img\sycon_ltit.jpg" />
+    <Content Include="img\sy_rtit.jpg" />
+    <Content Include="img\s_bg.jpg" />
+    <Content Include="js\calendar.js" />
+    <Content Include="js\index.js" />
+    <Content Include="js\jquery\jquery-1.3.2.min.js" />
+    <Content Include="js\jquery\jquery.cookie.min.js" />
+    <Content Include="js\jquery\jquery.jqzoom.js" />
+    <Content Include="js\jquery\jquery.pagination.js" />
+    <Content Include="js\jquery\jquery.treeview.js" />
+    <Content Include="js\jquery\jquery.validate.js" />
+    <Content Include="js\jquery\jquery.cookie.js" />
+    <Content Include="js\jquery\jquery.validate.min.js" />
+    <Content Include="js\jquery\jquery.validate.textarea.js" />
+    <Content Include="js\jquery\jquery.jqzoom.min.js" />
+    <Content Include="js\jquery\jquery.pagination.min.js" />
+    <Content Include="js\jquery\tipswindown.js" />
+    <Content Include="js\jquery\tipswindown.min.js" />
+    <Content Include="js\login.js" />
+    <Content Include="js\top.js" />
+    <Content Include="js\goodslist.js" />
+    <Content Include="js\goodsshow.js" />
+    <Content Include="js\shoppingcart.js" />
+    <Content Include="js\register.js" />
+    <Content Include="js\loginpop.js" />
+    <Content Include="js\ordercheck.js" />
+    <Content Include="js\loginpopordercheck.js" />
+    <Content Include="js\forgetpassword.js" />
+    <Content Include="js\categorygoods.js" />
+    <Content Include="js\forgetpasswordmessage.js" />
+    <Content Include="js\goodslist1.js" />
+    <Content Include="js\top1.js" />
+    <Content Include="js\index1.js" />
+    <Content Include="js\goodsshow1.js" />
+    <Content Include="js\search.js" />
+    <Content Include="js\ordersuccess1.js" />
+    <Content Include="js\ordersuccess.js" />
+    <Content Include="js\categorygoods1.js" />
+    <Content Include="js\newgoodslist.js" />
+    <Content Include="js\discountgoodslist.js" />
+    <Content Include="LoginPop.aspx" />
+    <Content Include="mailtemplate\info\EmailStatistics.aspx" />
+    <Content Include="mailtemplate\info\img\01.gif" />
+    <Content Include="mailtemplate\info\img\02.gif" />
+    <Content Include="mailtemplate\info\img\03.jpg" />
+    <Content Include="mailtemplate\info\img\04.gif" />
+    <Content Include="mailtemplate\info\img\b01.gif" />
+    <Content Include="mailtemplate\info\img\b02.gif" />
+    <Content Include="mailtemplate\info\img\b03.gif" />
+    <Content Include="mailtemplate\info\img\bg.jpg" />
+    <Content Include="mailtemplate\info\img\cp001.gif" />
+    <Content Include="mailtemplate\info\img\goods\1098.jpg" />
+    <Content Include="mailtemplate\info\img\goods\1118.jpg" />
+    <Content Include="mailtemplate\info\img\goods\1119.jpg" />
+    <Content Include="mailtemplate\info\img\goods\1123.jpg" />
+    <Content Include="mailtemplate\info\img\goods\1126.jpg" />
+    <Content Include="mailtemplate\info\img\goods\1162.jpg" />
+    <Content Include="mailtemplate\info\img\goods\1172.jpg" />
+    <Content Include="mailtemplate\info\img\goods\1241.jpg" />
+    <Content Include="mailtemplate\info\img\goods\1258.jpg" />
+    <Content Include="mailtemplate\info\img\goods\1261.jpg" />
+    <Content Include="mailtemplate\info\img\goods\1296.jpg" />
+    <Content Include="mailtemplate\info\img\goods\1310.jpg" />
+    <Content Include="mailtemplate\info\img\goods\1317.jpg" />
+    <Content Include="mailtemplate\info\img\goods\1318.jpg" />
+    <Content Include="mailtemplate\info\img\goods\1319.jpg" />
+    <Content Include="mailtemplate\info\img\goods\1323.jpg" />
+    <Content Include="mailtemplate\info\img\goods\1326.jpg" />
+    <Content Include="mailtemplate\info\img\goods\1329.jpg" />
+    <Content Include="mailtemplate\info\img\goods\1331.jpg" />
+    <Content Include="mailtemplate\info\img\goods\1409.jpg" />
+    <Content Include="mailtemplate\info\img\goods\1411.jpg" />
+    <Content Include="mailtemplate\info\img\goods\1413.jpg" />
+    <Content Include="mailtemplate\info\img\goods\1414.jpg" />
+    <Content Include="mailtemplate\info\img\menu_bg.jpg" />
+    <Content Include="mailtemplate\info\img\tit.gif" />
+    <Content Include="mailtemplate\info\page\weipinadmail.html" />
+    <Content Include="mailtemplate\info\template\weipinadmail.html" />
+    <Content Include="mailtemplate\updatepasswordverify.html" />
+    <Content Include="mailtemplate\registerverify.html" />
+    <Content Include="myhome\css\myorderslist.css" />
+    <Content Include="myhome\css\returngoodslist.css" />
+    <Content Include="myhome\css\mycollectlist.css" />
+    <Content Include="myhome\css\updatepassword.css" />
+    <Content Include="myhome\css\userinfo.css" />
+    <Content Include="myhome\css\myshippingaddresseslist.css" />
+    <Content Include="myhome\css\myreturnorderslist.css" />
+    <Content Include="myhome\css\goodscommentslist.css" />
+    <Content Include="myhome\css\goodscomments.css" />
+    <Content Include="myhome\css\myintegrallist.css" />
+    <Content Include="myhome\css\myordersdetails.css" />
+    <Content Include="myhome\css\forgetpasswrodupdate.css" />
+    <Content Include="myhome\css\verifyemail.css" />
+    <Content Include="myhome\css\verifyupdateemail.css" />
+    <Content Include="myhome\css\myoffsetprice.css" />
+    <Content Include="myhome\js\myorderslist.js" />
+    <Content Include="myhome\js\returngoodslist.js" />
+    <Content Include="myhome\js\mycollectlist.js" />
+    <Content Include="myhome\js\updatepassword.js" />
+    <Content Include="myhome\js\userinfo.js" />
+    <Content Include="myhome\js\myshippingaddresseslist.js" />
+    <Content Include="myhome\js\myreturnorderslist.js" />
+    <Content Include="myhome\js\goodscommentslist.js" />
+    <Content Include="myhome\js\goodscomments.js" />
+    <Content Include="myhome\js\myintegrallist.js" />
+    <Content Include="myhome\js\myordersdetails.js" />
+    <Content Include="myhome\js\forgetpasswrodupdate.js" />
+    <Content Include="myhome\js\verifyemail.js" />
+    <Content Include="myhome\js\verifyupdateemail.js" />
+    <Content Include="myhome\MyOrdersList.aspx" />
+    <Content Include="myhome\ReturnGoodsList.aspx" />
+    <Content Include="myhome\MyCollectList.aspx" />
+    <Content Include="myhome\UpdatePassword.aspx" />
+    <Content Include="myhome\UserInfo.aspx" />
+    <Content Include="myhome\MyShippingAddressesList.aspx" />
+    <Content Include="myhome\MyReturnOrdersList.aspx" />
+    <Content Include="myhome\GoodsCommentsList.aspx" />
+    <Content Include="myhome\GoodsComments.aspx" />
+    <Content Include="myhome\MyIntegralList.aspx" />
+    <Content Include="myhome\MyOrdersDetails.aspx" />
+    <Content Include="myhome\ForgetpasswrodUpdate.aspx" />
+    <Content Include="myhome\VerifyEmail.aspx" />
+    <Content Include="myhome\VerifyUpdateEmail.aspx" />
+    <Content Include="myhome\MyOffsetPrice.aspx" />
+    <Content Include="ShoppingCart.aspx" />
+    <Content Include="templates\goodsshow.html" />
+    <Content Include="templates\index.html" />
+    <Content Include="ForgetPasswordMessage.aspx" />
+    <Content Include="templates\categorygoods.html" />
+    <Content Include="UserVerify.aspx" />
+    <Content Include="verifycode\ForgetPasswordVerifyCode.aspx" />
+    <Content Include="verifycode\UpdatePasswordVerifyCode.aspx" />
+    <Content Include="verifycode\ForgetpasswrodUpdateVerifyCode.aspx" />
+    <Content Include="verifycode\EmailVerifyCode.aspx" />
+    <None Include="Web References\cn.com.webxml.www\IpAddressSearchWebService.disco" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Login.aspx" />
+    <Content Include="Register.aspx" />
+    <Content Include="Logout.aspx" />
+    <Content Include="verifycode\RegisterVerifyCode.aspx" />
+    <Content Include="OrderCheck.aspx" />
+    <Content Include="LoginPopOrderCheck.aspx" />
+    <Content Include="OrderSuccess.aspx" />
+    <Content Include="xml\areas\areas.xml" />
+    <Content Include="xml\categories.xml" />
+    <Content Include="xml\couriers\couriers.xml" />
+    <Content Include="xml\deliveryperiod.xml" />
+    <Content Include="xml\goods\goodsstatus.xml" />
+    <Content Include="xml\goods\seasonrecommendgoods.xml" />
+    <Content Include="xml\integralsourse.xml" />
+    <Content Include="xml\orders\logisticsstatus.xml" />
+    <Content Include="xml\sizes.xml" />
+    <Content Include="Search.aspx" />
+    <Content Include="xml\vipgrade.xml" />
+    <Content Include="qc_back.html" />
+    <Content Include="NewGoodsList.aspx" />
+    <Content Include="DiscountGoodsList.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="admin\ajaxservice\Areas.aspx.cs">
+      <DependentUpon>Areas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ajaxservice\Areas.aspx.designer.cs">
+      <DependentUpon>Areas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ajaxservice\Attributes.aspx.cs">
+      <DependentUpon>Attributes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ajaxservice\Attributes.aspx.designer.cs">
+      <DependentUpon>Attributes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ajaxservice\AttributeValues.aspx.cs">
+      <DependentUpon>AttributeValues.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ajaxservice\AttributeValues.aspx.designer.cs">
+      <DependentUpon>AttributeValues.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ajaxservice\Categories.aspx.cs">
+      <DependentUpon>Categories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ajaxservice\Categories.aspx.designer.cs">
+      <DependentUpon>Categories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ajaxservice\Couriers.aspx.cs">
+      <DependentUpon>Couriers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ajaxservice\Couriers.aspx.designer.cs">
+      <DependentUpon>Couriers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ajaxservice\Goods.aspx.cs">
+      <DependentUpon>Goods.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ajaxservice\Goods.aspx.designer.cs">
+      <DependentUpon>Goods.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ajaxservice\GoodsComments.aspx.cs">
+      <DependentUpon>GoodsComments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ajaxservice\GoodsComments.aspx.designer.cs">
+      <DependentUpon>GoodsComments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ajaxservice\GoodsPictures.aspx.cs">
+      <DependentUpon>GoodsPictures.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ajaxservice\GoodsPictures.aspx.designer.cs">
+      <DependentUpon>GoodsPictures.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ajaxservice\Orders.aspx.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ajaxservice\Orders.aspx.designer.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ajaxservice\OrdersRemarks.aspx.cs">
+      <DependentUpon>OrdersRemarks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ajaxservice\OrdersRemarks.aspx.designer.cs">
+      <DependentUpon>OrdersRemarks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ajaxservice\Orders_Goods.aspx.cs">
+      <DependentUpon>Orders_Goods.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ajaxservice\Orders_Goods.aspx.designer.cs">
+      <DependentUpon>Orders_Goods.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ajaxservice\Sizes.aspx.cs">
+      <DependentUpon>Sizes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ajaxservice\Sizes.aspx.designer.cs">
+      <DependentUpon>Sizes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ajaxservice\UploadPicture.aspx.cs">
+      <DependentUpon>UploadPicture.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ajaxservice\UploadPicture.aspx.designer.cs">
+      <DependentUpon>UploadPicture.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Areas.aspx.cs">
+      <DependentUpon>Areas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Areas.aspx.designer.cs">
+      <DependentUpon>Areas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Attributes.aspx.cs">
+      <DependentUpon>Attributes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Attributes.aspx.designer.cs">
+      <DependentUpon>Attributes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\AttributeValues.aspx.cs">
+      <DependentUpon>AttributeValues.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\AttributeValues.aspx.designer.cs">
+      <DependentUpon>AttributeValues.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Cagegories.aspx.cs">
+      <DependentUpon>Cagegories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Cagegories.aspx.designer.cs">
+      <DependentUpon>Cagegories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\controls\headadmin.ascx.cs">
+      <DependentUpon>headadmin.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\controls\headadmin.ascx.designer.cs">
+      <DependentUpon>headadmin.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\CouriersAdd.aspx.cs">
+      <DependentUpon>CouriersAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\CouriersAdd.aspx.designer.cs">
+      <DependentUpon>CouriersAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\CouriersList.aspx.cs">
+      <DependentUpon>CouriersList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\CouriersList.aspx.designer.cs">
+      <DependentUpon>CouriersList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\CouriersUpdate.aspx.cs">
+      <DependentUpon>CouriersUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\CouriersUpdate.aspx.designer.cs">
+      <DependentUpon>CouriersUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\GoodsAdd.aspx.cs">
+      <DependentUpon>GoodsAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\GoodsAdd.aspx.designer.cs">
+      <DependentUpon>GoodsAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\GoodsBatchUpdate.aspx.cs">
+      <DependentUpon>GoodsBatchUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\GoodsBatchUpdate.aspx.designer.cs">
+      <DependentUpon>GoodsBatchUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\GoodsCommentsList.aspx.cs">
+      <DependentUpon>GoodsCommentsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\GoodsCommentsList.aspx.designer.cs">
+      <DependentUpon>GoodsCommentsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\GoodsShow.aspx.cs">
+      <DependentUpon>GoodsShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\GoodsShow.aspx.designer.cs">
+      <DependentUpon>GoodsShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\GoodsSupplyList.aspx.cs">
+      <DependentUpon>GoodsSupplyList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\GoodsSupplyList.aspx.designer.cs">
+      <DependentUpon>GoodsSupplyList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\GoodsUpdate.aspx.cs">
+      <DependentUpon>GoodsUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\GoodsUpdate.aspx.designer.cs">
+      <DependentUpon>GoodsUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\OrdersChangeGoodsList.aspx.cs">
+      <DependentUpon>OrdersChangeGoodsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\OrdersChangeGoodsList.aspx.designer.cs">
+      <DependentUpon>OrdersChangeGoodsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\OrdersList.aspx.cs">
+      <DependentUpon>OrdersList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\OrdersList.aspx.designer.cs">
+      <DependentUpon>OrdersList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\OrdersOutLibraryList.aspx.cs">
+      <DependentUpon>OrdersOutLibraryList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\OrdersOutLibraryList.aspx.designer.cs">
+      <DependentUpon>OrdersOutLibraryList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\OrdersPrint.aspx.cs">
+      <DependentUpon>OrdersPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\OrdersPrint.aspx.designer.cs">
+      <DependentUpon>OrdersPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\OrdersRemarksAdd.aspx.cs">
+      <DependentUpon>OrdersRemarksAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\OrdersRemarksAdd.aspx.designer.cs">
+      <DependentUpon>OrdersRemarksAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\OrdersRemarksEdit.aspx.cs">
+      <DependentUpon>OrdersRemarksEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\OrdersRemarksEdit.aspx.designer.cs">
+      <DependentUpon>OrdersRemarksEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\OrdersRemarksList.aspx.cs">
+      <DependentUpon>OrdersRemarksList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\OrdersRemarksList.aspx.designer.cs">
+      <DependentUpon>OrdersRemarksList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\OrdersReturnGoodsList.aspx.cs">
+      <DependentUpon>OrdersReturnGoodsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\OrdersReturnGoodsList.aspx.designer.cs">
+      <DependentUpon>OrdersReturnGoodsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\OrdersSearchGoodsList.aspx.cs">
+      <DependentUpon>OrdersSearchGoodsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\OrdersSearchGoodsList.aspx.designer.cs">
+      <DependentUpon>OrdersSearchGoodsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\SizesAdd.aspx.cs">
+      <DependentUpon>SizesAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\SizesAdd.aspx.designer.cs">
+      <DependentUpon>SizesAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\SizesList.aspx.cs">
+      <DependentUpon>SizesList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\SizesList.aspx.designer.cs">
+      <DependentUpon>SizesList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\SizesUpdate.aspx.cs">
+      <DependentUpon>SizesUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\SizesUpdate.aspx.designer.cs">
+      <DependentUpon>SizesUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\CreateGoodsIndex.aspx.cs">
+      <DependentUpon>CreateGoodsIndex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\CreateGoodsIndex.aspx.designer.cs">
+      <DependentUpon>CreateGoodsIndex.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\SendAdvertisementMail.aspx.cs">
+      <DependentUpon>SendAdvertisementMail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\SendAdvertisementMail.aspx.designer.cs">
+      <DependentUpon>SendAdvertisementMail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ajaxservice\Areas.aspx.cs">
+      <DependentUpon>Areas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ajaxservice\Areas.aspx.designer.cs">
+      <DependentUpon>Areas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ajaxservice\Goods.aspx.cs">
+      <DependentUpon>Goods.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ajaxservice\Goods.aspx.designer.cs">
+      <DependentUpon>Goods.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ajaxservice\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ajaxservice\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ajaxservice\GoodsComments.aspx.cs">
+      <DependentUpon>GoodsComments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ajaxservice\GoodsComments.aspx.designer.cs">
+      <DependentUpon>GoodsComments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ajaxservice\GoodsCollect.aspx.cs">
+      <DependentUpon>GoodsCollect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ajaxservice\GoodsCollect.aspx.designer.cs">
+      <DependentUpon>GoodsCollect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ajaxservice\Users.aspx.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ajaxservice\Users.aspx.designer.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ajaxservice\VerifyCode.aspx.cs">
+      <DependentUpon>VerifyCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ajaxservice\VerifyCode.aspx.designer.cs">
+      <DependentUpon>VerifyCode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ajaxservice\MyShippingAddresses.aspx.cs">
+      <DependentUpon>MyShippingAddresses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ajaxservice\MyShippingAddresses.aspx.designer.cs">
+      <DependentUpon>MyShippingAddresses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ajaxservice\Orders.aspx.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ajaxservice\Orders.aspx.designer.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="alipay\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="alipay\notify_url.aspx.designer.cs">
+      <DependentUpon>notify_url.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="alipay\return_url.aspx.designer.cs">
+      <DependentUpon>return_url.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\UpFiles.cs" />
+    <Compile Include="controls\bottom.ascx.cs">
+      <DependentUpon>bottom.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\bottom.ascx.designer.cs">
+      <DependentUpon>bottom.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\top.ascx.cs">
+      <DependentUpon>top.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\top.ascx.designer.cs">
+      <DependentUpon>top.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\myhome.ascx.cs">
+      <DependentUpon>myhome.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\myhome.ascx.designer.cs">
+      <DependentUpon>myhome.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="alipay\app_code\AlipayConfig.cs" />
+    <Compile Include="alipay\app_code\AlipayCore.cs" />
+    <Compile Include="alipay\app_code\AlipayNotify.cs" />
+    <Compile Include="alipay\app_code\AlipaySubmit.cs" />
+    <Compile Include="alipay\app_code\MD5.cs" />
+    <Compile Include="alipay\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="alipay\notify_url.aspx.cs">
+      <DependentUpon>notify_url.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="alipay\return_url.aspx.cs">
+      <DependentUpon>return_url.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForgetPassword.aspx.cs">
+      <DependentUpon>ForgetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgetPassword.aspx.designer.cs">
+      <DependentUpon>ForgetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GoodsList.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>GoodsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GoodsList.aspx.designer.cs">
+      <DependentUpon>GoodsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="help\MySuggest.aspx.cs">
+      <DependentUpon>MySuggest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="help\MySuggest.aspx.designer.cs">
+      <DependentUpon>MySuggest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPop.aspx.cs">
+      <DependentUpon>LoginPop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginPop.aspx.designer.cs">
+      <DependentUpon>LoginPop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mailtemplate\info\EmailStatistics.aspx.cs">
+      <DependentUpon>EmailStatistics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mailtemplate\info\EmailStatistics.aspx.designer.cs">
+      <DependentUpon>EmailStatistics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="myhome\MyOrdersList.aspx.cs">
+      <DependentUpon>MyOrdersList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="myhome\MyOrdersList.aspx.designer.cs">
+      <DependentUpon>MyOrdersList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="myhome\ReturnGoodsList.aspx.cs">
+      <DependentUpon>ReturnGoodsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="myhome\ReturnGoodsList.aspx.designer.cs">
+      <DependentUpon>ReturnGoodsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="myhome\MyCollectList.aspx.cs">
+      <DependentUpon>MyCollectList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="myhome\MyCollectList.aspx.designer.cs">
+      <DependentUpon>MyCollectList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="myhome\UpdatePassword.aspx.cs">
+      <DependentUpon>UpdatePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="myhome\UpdatePassword.aspx.designer.cs">
+      <DependentUpon>UpdatePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="myhome\UserInfo.aspx.cs">
+      <DependentUpon>UserInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="myhome\UserInfo.aspx.designer.cs">
+      <DependentUpon>UserInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="myhome\MyShippingAddressesList.aspx.cs">
+      <DependentUpon>MyShippingAddressesList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="myhome\MyShippingAddressesList.aspx.designer.cs">
+      <DependentUpon>MyShippingAddressesList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="myhome\MyReturnOrdersList.aspx.cs">
+      <DependentUpon>MyReturnOrdersList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="myhome\MyReturnOrdersList.aspx.designer.cs">
+      <DependentUpon>MyReturnOrdersList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="myhome\GoodsCommentsList.aspx.cs">
+      <DependentUpon>GoodsCommentsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="myhome\GoodsCommentsList.aspx.designer.cs">
+      <DependentUpon>GoodsCommentsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="myhome\GoodsComments.aspx.cs">
+      <DependentUpon>GoodsComments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="myhome\GoodsComments.aspx.designer.cs">
+      <DependentUpon>GoodsComments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="myhome\MyIntegralList.aspx.cs">
+      <DependentUpon>MyIntegralList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="myhome\MyIntegralList.aspx.designer.cs">
+      <DependentUpon>MyIntegralList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="myhome\MyOrdersDetails.aspx.cs">
+      <DependentUpon>MyOrdersDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="myhome\MyOrdersDetails.aspx.designer.cs">
+      <DependentUpon>MyOrdersDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="myhome\ForgetpasswrodUpdate.aspx.cs">
+      <DependentUpon>ForgetpasswrodUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="myhome\ForgetpasswrodUpdate.aspx.designer.cs">
+      <DependentUpon>ForgetpasswrodUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="myhome\VerifyEmail.aspx.cs">
+      <DependentUpon>VerifyEmail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="myhome\VerifyEmail.aspx.designer.cs">
+      <DependentUpon>VerifyEmail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="myhome\VerifyUpdateEmail.aspx.cs">
+      <DependentUpon>VerifyUpdateEmail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="myhome\VerifyUpdateEmail.aspx.designer.cs">
+      <DependentUpon>VerifyUpdateEmail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="myhome\MyOffsetPrice.aspx.cs">
+      <DependentUpon>MyOffsetPrice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="myhome\MyOffsetPrice.aspx.designer.cs">
+      <DependentUpon>MyOffsetPrice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ShoppingCart.aspx.cs">
+      <DependentUpon>ShoppingCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShoppingCart.aspx.designer.cs">
+      <DependentUpon>ShoppingCart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForgetPasswordMessage.aspx.cs">
+      <DependentUpon>ForgetPasswordMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgetPasswordMessage.aspx.designer.cs">
+      <DependentUpon>ForgetPasswordMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserVerify.aspx.cs">
+      <DependentUpon>UserVerify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserVerify.aspx.designer.cs">
+      <DependentUpon>UserVerify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="verifycode\RegisterVerifyCode.aspx.cs">
+      <DependentUpon>RegisterVerifyCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="verifycode\RegisterVerifyCode.aspx.designer.cs">
+      <DependentUpon>RegisterVerifyCode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrderCheck.aspx.cs">
+      <DependentUpon>OrderCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrderCheck.aspx.designer.cs">
+      <DependentUpon>OrderCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPopOrderCheck.aspx.cs">
+      <DependentUpon>LoginPopOrderCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginPopOrderCheck.aspx.designer.cs">
+      <DependentUpon>LoginPopOrderCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrderSuccess.aspx.cs">
+      <DependentUpon>OrderSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrderSuccess.aspx.designer.cs">
+      <DependentUpon>OrderSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="verifycode\ForgetPasswordVerifyCode.aspx.cs">
+      <DependentUpon>ForgetPasswordVerifyCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="verifycode\ForgetPasswordVerifyCode.aspx.designer.cs">
+      <DependentUpon>ForgetPasswordVerifyCode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="verifycode\UpdatePasswordVerifyCode.aspx.cs">
+      <DependentUpon>UpdatePasswordVerifyCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="verifycode\UpdatePasswordVerifyCode.aspx.designer.cs">
+      <DependentUpon>UpdatePasswordVerifyCode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="verifycode\ForgetpasswrodUpdateVerifyCode.aspx.cs">
+      <DependentUpon>ForgetpasswrodUpdateVerifyCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="verifycode\ForgetpasswrodUpdateVerifyCode.aspx.designer.cs">
+      <DependentUpon>ForgetpasswrodUpdateVerifyCode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="verifycode\EmailVerifyCode.aspx.cs">
+      <DependentUpon>EmailVerifyCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="verifycode\EmailVerifyCode.aspx.designer.cs">
+      <DependentUpon>EmailVerifyCode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\cn.com.webxml.www\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="NewGoodsList.aspx.cs">
+      <DependentUpon>NewGoodsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewGoodsList.aspx.designer.cs">
+      <DependentUpon>NewGoodsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DiscountGoodsList.aspx.cs">
+      <DependentUpon>DiscountGoodsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DiscountGoodsList.aspx.designer.cs">
+      <DependentUpon>DiscountGoodsList.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{3DF8F466-54B5-492C-8BC3-05FE821EACFF}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{680E6ADB-878A-4413-BC5C-E1F817D266FA}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{6A081391-BE12-449A-A8B7-E0EDD26C918E}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="alipay\images\Thumbs.db" />
+    <None Include="file\Release\Demo.vshost.exe.manifest" />
+    <None Include="img\logo.psd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\cn.com.webxml.www\IpAddressSearchWebService.wsdl" />
+    <None Include="Web References\cn.com.webxml.www\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://www.webxml.com.cn/WebServices/IpAddressSearchWebService.asmx%3fop=getCountryCityByIp">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\cn.com.webxml.www\</RelPath>
+      <UpdateFromURL>http://www.webxml.com.cn/WebServices/IpAddressSearchWebService.asmx%3fop=getCountryCityByIp</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>weipin_cn_com_webxml_www_IpAddressSearchWebService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="file\images\tempfolder\" />
+    <Folder Include="file\index\" />
+    <Folder Include="page\0\" />
+    <Folder Include="page\1\" />
+    <Folder Include="page\categorygoods\" />
+    <Folder Include="xml\attributes\" />
+    <Folder Include="xml\goods\goodsattributesvalues\" />
+    <Folder Include="xml\goods\goodsdifference\" />
+    <Folder Include="xml\goods\goodspaths\" />
+    <Folder Include="xml\goods\goodssizes\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>10291</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

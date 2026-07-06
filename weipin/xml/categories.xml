@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<categories>
+  <category1 name="潮流饰品" value="17" ishighlight="False" remarks="">
+    <category2 name="笔" value="18" ishighlight="False" remarks="">
+      <category3 name="中性笔" value="19" ishighlight="False" remarks="" />
+    </category2>
+  </category1>
+  <category1 name="家居/家纺" value="9" ishighlight="False" remarks="">
+    <category2 name="家纺" value="10" ishighlight="False" remarks="">
+      <category3 name="毛巾" value="13" ishighlight="False" remarks="" />
+      <category3 name="浴巾" value="27" ishighlight="False" remarks="" />
+    </category2>
+    <category2 name="水具" value="28" ishighlight="True" remarks="">
+      <category3 name="马克杯" value="29" ishighlight="True" remarks="" />
+    </category2>
+  </category1>
+  <category1 name="服饰/帽袜" value="3" ishighlight="False" remarks="">
+    <category2 name="服饰" value="4" ishighlight="False" remarks="">
+      <category3 name="衬衣" value="26" ishighlight="False" remarks="" />
+      <category3 name="睡衣" value="8" ishighlight="False" remarks="" />
+    </category2>
+    <category2 name="鞋" value="5" ishighlight="True" remarks="">
+      <category3 name="拖鞋" value="15" ishighlight="False" remarks="" />
+    </category2>
+    <category2 name="袜子" value="6" ishighlight="True" remarks="">
+      <category3 name="卡通袜" value="11" ishighlight="False" remarks="" />
+      <category3 name="棉袜" value="12" ishighlight="False" remarks="" />
+    </category2>
+    <category2 name="配饰" value="7" ishighlight="False" remarks="">
+      <category3 name="手套" value="16" ishighlight="False" remarks="" />
+    </category2>
+  </category1>
+  <category1 name="汽车用品" value="20" ishighlight="False" remarks="">
+    <category2 name="饰品" value="21" ishighlight="False" remarks="">
+      <category3 name="公仔公仔公" value="22" ishighlight="False" remarks="" />
+      <category3 name="竹炭竹炭竹" value="30" ishighlight="False" remarks="" />
+      <category3 name="抱枕头靠枕" value="31" ishighlight="False" remarks="" />
+    </category2>
+  </category1>
+</categories>

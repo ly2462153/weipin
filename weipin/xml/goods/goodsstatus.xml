@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GoodsStatus>
+  <Status>
+    <StatusID>3</StatusID>
+    <StatusName>换货</StatusName>
+  </Status>
+  <Status>
+    <StatusID>4</StatusID>
+    <StatusName>退货</StatusName>
+  </Status>
+  <Status>
+    <StatusID>5</StatusID>
+    <StatusName>退货成功</StatusName>
+  </Status>
+  <Status>
+    <StatusID>6</StatusID>
+    <StatusName>交易成功</StatusName>
+  </Status>
+</GoodsStatus>

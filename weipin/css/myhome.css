@@ -1,0 +1,8 @@
+﻿.main { width: 970px; height: auto; overflow: hidden; margin: 8px auto auto auto; }
+.main_left { width: 150px; height: auto; overflow: hidden; }
+.main_left h1 { background: url("/img/index_tit01.jpg") repeat-x; line-height: 35px; font-size: 14px; color: #fff; font-weight: bold; padding-left: 8px; margin: 0px; }
+.main_left ul { border: 1px solid #D0D0D0; width: 148px; height: auto; overflow: hidden; border-top: none; }
+.main_left ul li { line-height: 26px; padding-left: 25px; }
+.main_left ul a { color: #333; }
+.main_left ul a:hover { color: #990000; text-decoration: underline; }
+.main_left ul .li { background: url("/img/menul_bg.jpg") repeat-x; font-weight: bold; line-height: 27px; border-bottom: 1px solid #D0D0D0; padding-left: 15px; }

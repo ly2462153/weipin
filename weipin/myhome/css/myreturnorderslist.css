@@ -1,0 +1,31 @@
+﻿.btnsearch { background: url("/img/use.gif") repeat scroll 0 -42px transparent; height: 25px; margin-top: -1px; width: 50px; border: medium none; }
+.main_right { width: 810px; height: auto; overflow: hidden; }
+.main_right h1 { border-color: #E6E6E6 #E6E6E6 #C30000; border-style: solid; border-width: 1px 1px 2px; height: 33px; line-height: 33px; margin-bottom: 10px; color: #CC0000; padding-left: 16px; font-size: 14px; margin: 0px; }
+.main_right .div_content { width: 100%; height: auto; overflow: hidden; margin-top: 10px; }
+.div_content ul { border-bottom: 2px solid #FFCCAA; padding-left: 5px; z-index: 2; width: 805px; height: auto; overflow: hidden; }
+.div_content ul li { background: url("/img/tab.gif") repeat scroll 0 -28px transparent; float: left; height: 27px; line-height: 29px; margin-right: 3px; overflow: hidden; padding: 0 10px; position: relative; text-align: center; }
+.div_content ul li.curr s { background-position: 0 -57px; }
+.div_content ul li s { left: 0; }
+.div_content ul li s, .div_content ul li b { background: url("/img/tab.gif") repeat scroll 0 0 transparent; height: 27px; position: absolute; top: 0; width: 3px; }
+.div_content ul li.curr b { background-position: -7px -57px; }
+.div_content ul li b { background-position: -7px 0; right: 0; }
+.div_content ul li.curr, .div_content ul li.curr a:link, .div_content ul li.curr a:visited { color: #FF6600; font-weight: bold; }
+.div_content ul li.curr { background-position: 0 -85px; }
+.main_right .div_tab { width: 808px; height: auto; overflow: hidden; border: 1px solid #E6E6E6; border-bottom: none; }
+.div_tab label, .div_tab input, .div_tab select, .div_tab textarea, .div_tab button, .div_tab .label { float: left; font-size: 12px; }
+.sele { margin-right: 10px; }
+.div_tab .text, .div_tab .area { border-color: #aaa #ddd #ddd #aaa; border-style: solid; border-width: 1px; margin-right: 5px; padding: 4px; }
+.div_tab .top_title { width: 778px; height: auto; overflow: hidden; padding: 10px 15px; }
+.main_right .div_bottom { border-top: 1px solid #E6E6E6; width: 100%; height: auto; overflow: hidden; }
+.div_bottom table { border-collapse: collapse; width: 100%; height: auto; border-left: none; border: 1px solid #E6E6E6; border-top: none; }
+.div_bottom table th { background: url("/img/tb-th.2011.gif") repeat-x scroll 0 0 #F7F7F7; color: #666666; font-weight: normal; height: 30px; }
+.div_bottom table td { border-color: #E6E6E6; border-style: solid; border-width: 1px 0 0 1px; border: 1px solid #e6e6e6; padding: 5px 4px; text-align: center; }
+.div_bottom a.btn-again { background: url("/img/use.gif") repeat; height: 21px; line-height: 21px; display: block; margin: 3px auto 0; overflow: hidden; width: 72px; }
+.div_bottom .img-list { margin-bottom: -4px; overflow: hidden; }
+.img-list a img { margin-left: 8px; margin-bottom: 5px; }
+.page { text-align: center; margin: 20px 0 20px 0; line-height: 26px; }
+.page a { border: solid 1px #EDEDED; padding: 5px 10px 5px 10px; margin: 0 5px 0 5px; }
+.page span { border: solid 1px #EDEDED; padding: 5px 10px 5px 10px; margin: 0 5px 0 5px; }
+.arrow_up { background: url(/img/arrow_up.gif) no-repeat 5px center; padding: 5px 10px 5px 20px; }
+.arrow_down { background: url(/img/arrow_down.gif) no-repeat 5px center; padding: 5px 10px 5px 20px; }
+.pageon { background: #A10000; color: #fff; padding: 5px 10px 5px 10px; }

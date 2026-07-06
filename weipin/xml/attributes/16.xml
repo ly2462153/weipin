@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Attributes>
+  <Attribute name="材质" value="16">
+    <AttributeValues name="混纺" value="26" />
+    <AttributeValues name="羊毛" value="27" />
+  </Attribute>
+  <Attribute name="长度" value="17">
+    <AttributeValues name="短款" value="28" />
+    <AttributeValues name="长款" value="29" />
+  </Attribute>
+</Attributes>

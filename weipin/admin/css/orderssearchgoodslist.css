@@ -1,0 +1,13 @@
+﻿#aside fieldset { border: 1px solid #bfbfbf; padding: 0 5px 0 10px; margin: 0 0 10px 10px; }
+#aside fieldset p { margin: 10px 0 10px 0; }
+.box table { border: 1px solid #CFCFCF; }
+.tb td { text-align: left; }
+.tb .tdL { width: 100px; text-align: right; font-weight: bold; }
+
+.tablelist { width: 100%; text-align: center; margin: 0; border-collapse: collapse; border: 2px solid #cfcfcf; }
+.tablelist th { text-align: center; vertical-align: middle; font-weight: bold; border-right: 1px solid #0074B3; background-color: #0085cc; color: #fff; padding: 5px 5px; }
+.tablelist td { border: 1px solid #cfcfcf; padding: 5px 5px; }
+.tablelist tr.bg td { background-color: #e8f6ff; }
+.tablelist tr:hover { color: #ff6600; }
+.tablelist td { text-align: center; border: 1px solid #CFCFCF; border-collapse: collapse; }
+.tablelist td img { width: 50px; height: 50px; }

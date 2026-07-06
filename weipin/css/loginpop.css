@@ -1,0 +1,25 @@
+﻿body, td, th, div, ul, li, dl, dt, dd, input { color: #000000; font-size: 12px; margin: 0px; padding: 0px; list-style-type: none; font-family: "宋体"; font-weight: normal; }
+body { background-color: #fff; line-height: 160%; font-family: "宋体"; }
+img { border: 0px; margin: 0px; padding: 0px; }
+p { text-indent: 2em; margin: 0px 0px 5px 0px; padding: 0px; line-height: 140%; }
+a { color: #333; text-decoration: none; }
+a:hover { color: #FF6204; text-decoration: underline; }
+.clear { clear: both; }
+.l { float: left; }
+.r { float: right; }
+.w970 { width: 970px; height: auto; margin: 0 auto 0 auto; }
+/*为公共样式e*/
+.openbox { width: 350px; border: solid 1px #990000; padding-bottom: 15px; }
+.openbox_tit { background-image: url(/img/openbox_tit.jpg); height: 30px; color: #FFFFFF; line-height: 30px; font-weight: bold; padding-left: 10px; }
+.openbox_tab { background-image: url(/img/openbox_tabbg.jpg); height: 44px; line-height: 38px; padding-left: 20px; }
+.openbox_tab span { width: 68px; display: block; float: left; text-align: center; height: 44px; line-height: 40px; }
+.openbox_tab01 { background-image: url(/img/openbox_tab01.gif); background-position: 0px -1px; }
+.openbox_tab02 { background-image: url(/img/openbox_tab02.gif); background-position: 0px -1px; }
+.but_div { margin: 15px 20px 0 20px; line-height: 30px; }
+.but_div li { float: left; padding-left: 20px; }
+.but_div a { color: #005AA0; }
+.openbox_but { display: block; height: 30px; width: 92px; background-image: url(/img/openbox_but.jpg); text-align: center; line-height: 30px; font-size: 14px; font-weight: bold; background-repeat: no-repeat; }
+.logo_input { height: 26px; line-height:22px; width: 220px; border: solid 1px #C9C9C9; }
+.error { color: #ff0000; line-height:30px; display: block; }
+.logo_r { float: left; margin-top: 40px; border-left: solid 1px #ccc; height: 100px; padding-left: 10px; width: 300px; text-align: center; font-weight: bold; }
+.logo_r li { padding-bottom: 25px; font-weight: bold; }

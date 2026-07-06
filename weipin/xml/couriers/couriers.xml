@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Couriers>
+  <Courier>
+    <CourierID>6</CourierID>
+    <AreaID>3</AreaID>
+    <CourierName>李四</CourierName>
+  </Courier>
+  <Courier>
+    <CourierID>8</CourierID>
+    <AreaID>3</AreaID>
+    <CourierName>王五</CourierName>
+  </Courier>
+  <Courier>
+    <CourierID>7</CourierID>
+    <AreaID>4</AreaID>
+    <CourierName>张三</CourierName>
+  </Courier>
+  <Courier>
+    <CourierID>10</CourierID>
+    <AreaID>3</AreaID>
+    <CourierName>朱六</CourierName>
+  </Courier>
+</Couriers>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<vipgrade>
+  <vip name="1" value="0.95" />
+  <vip name="2" value="0.9" />
+  <vip name="3" value="0.85" />
+  <vip name="4" value="0.8" />
+  <vip name="5" value="0.75" />
+</vipgrade>

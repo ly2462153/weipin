@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Attributes>
+  <Attribute name="材质" value="8">
+    <AttributeValues name="全棉" value="11" />
+    <AttributeValues name="混纺" value="12" />
+  </Attribute>
+</Attributes>

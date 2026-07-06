@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Attributes>
+  <Attribute name="分类" value="13">
+    <AttributeValues name="zhongxb" value="17" />
+    <AttributeValues name="qianzib" value="18" />
+    <AttributeValues name="yuanzb" value="19" />
+  </Attribute>
+  <Attribute name="yanse" value="14">
+    <AttributeValues name="h" value="20" />
+    <AttributeValues name="hei" value="21" />
+    <AttributeValues name="lan" value="22" />
+  </Attribute>
+</Attributes>
